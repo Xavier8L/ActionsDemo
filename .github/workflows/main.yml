@@ -1,0 +1,27 @@
+name: Auto Merge to Master
+
+on:
+  push:
+    branches:
+      - your-branch-name # Xavier
+
+jobs:
+  merge-to-master:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge to master
+        run: |
+          git config user.name "Xavier8L"
+          git config user.email "Shenglongchen99@gmail.com"
+          git checkout master
+          git merge --no-ff ${{ github.event.ref }}
+          git push origin master
+
+       
+      - name: merge success
+        run: |
+          echo merge success
