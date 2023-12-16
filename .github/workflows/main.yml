@@ -18,8 +18,9 @@ jobs:
           git config user.name "Xavier8L"
           git config user.email "Shenglongchen99@gmail.com"
           git checkout main
+          git pull
           git merge --no-ff ${{ github.event.ref }}
-          git push origin master
+          git push origin main
 
        
       - name: merge success
