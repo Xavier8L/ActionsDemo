@@ -3,7 +3,7 @@ name: Auto Merge to Master
 on:
   push:
     branches:
-      - your-branch-name # Xavier
+      - Xavier
 
 jobs:
   merge-to-master:
