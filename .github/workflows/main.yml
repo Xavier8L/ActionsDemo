@@ -13,14 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: Merge to master
+      - name: Merge to main
         run: |
           git config user.name "Xavier8L"
           git config user.email "Shenglongchen99@gmail.com"
           git checkout main
           git pull
           git merge --no-ff ${{ github.event.ref }}
-          git push origin main
+          git push main
 
        
       - name: merge success
